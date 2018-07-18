@@ -1,27 +1,28 @@
 <template>
-	<main class="container col">
-		<div class="circleDot">
-			<i class="fas fa-terminal"></i>
-		</div>
-		<div id="aboutBox">
-		    <h1>Marc Hess</h1>
-		    <h2>Developer</h2>
-		    <h3>Imagine | Create</h3>
-		    <p>Here is some information. This is the home page</p>
-	  </div>
-	</main>	
-  
+	<main class="container row spaceBetween wrap">
+		<Left></Left>
+		<Right></Right>
+		<Contact></Contact>
+	</main>
 </template>
 
 <script>
+import Left from '@/components/Left'
+import Right from '@/components/Right'
+import Contact from '@/components/Contact'
 export default {
-  name: 'Home' //this is the name of the component
+  name: 'Home', //this is the name of the component
+  components: {
+  	'Left' : Left,
+  	'Right': Right,
+  	'Contact': Contact
+  }
 }
 </script>
 	
 <style lang="scss">
 	@import '../assets/style/variables.scss';
-	main{width:80%; margin-left:auto; margin-right:auto; margin-top: 50px; background:$lightBlue; padding:20px; 
+	main{width:80%; max-width:960px; margin-left:auto; margin-right:auto; margin-top: 50px; background:$lightBlue; padding:20px; 
 		-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.45);
 		-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.45);
 		box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.45);
